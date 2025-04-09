@@ -1,3 +1,33 @@
+### Portfolio - React Component Library This is a React-based library.
+
+## Project Setup
+# Step 1: Create a React App
+I created a react app using the commond npx create-react-app portfolio 
+
+## Step 2: Created all the components
+Basicinfo.js
+COntact.js
+DevSetup.js
+Resources.js etc
+
+## Step 3: Created quality checks for code
+npm install prettier, ESLint ensure all test passes before code is commited
+
+## Step 4: Pre-Commit Hook Setup
+Husky is set up to run these checks on every commit automatically. If any checks fail, the commit will be blocked until the issues are resolved. The configuration files for Prettier, ESLint, and testing are already set up in the project.
+
+## Step 5: Build docker Image
+I build the docker image by running this command docker build -t kaur_khushleen_coding_assignment14 .
+
+## Step 6: Docker Container
+I made the docker container and port them on 8018 port using docker run -p 8018:80 --name kaur_khushleen_ui_garden kaur_khushleen_coding_assignment14
+
+We can run the project by visting http://localhost:5575.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
