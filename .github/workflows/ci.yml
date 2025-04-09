@@ -1,0 +1,31 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger workflow on pull request to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use the latest version of Ubuntu to run the job
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Set the version of Node.js you want to use
+
+      - name: Install dependencies
+        run: npm install  # Install dependencies from package.json
+
+      - name: Run lint
+        run: npm run lint  # Run linting (e.g. with Prettier, ESLint)
+
+      - name: Run tests
+        run: npm test  # Run your tests (if you have any set up)
